@@ -50,14 +50,14 @@
 	if($errflag) {
 		$_SESSION['ERRMSG_ARR'] = $errmsg_arr;
 		session_write_close();
-		echo 'Fuck oFF';
-		
+		echo 'not working';
+	
 		exit();
 	}
-	
+	header("location: try.html");
 
 	//Create query
-	$qry="SELECT * FROM login WHERE username='$login' AND password='$password'";
+/*	$qry="SELECT * FROM login WHERE username='$login' AND password='$password'";
 	$result=mysql_query($qry);
 	
 	//Check whether the query was successful or not
@@ -83,5 +83,5 @@
 	}else {
 		$_SESSION['logfail2'] = "fail";
 		die("Query failed");
-	}
+	}   */
 ?>

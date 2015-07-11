@@ -73,11 +73,11 @@ function validateForm() {
     <h2>Economic Metrics</h2>
 	
 	
-	Increase in average household income: <input type="text" name="inc_incr" placeholder="e.g. 20000" required></input>
+	Date of damage:<br> <input type="text" name="YYYY" placeholder="YYYY" required></input>-<input type="text" name="MM" placeholder="MM" required></input>-<input type="text" name="DD" placeholder="DD" required></input>
 	<br>
-	Increase in number of jobs in area: <input type="text" name="inc_jobs" placeholder="e.g. 450"/ required><br>
-	Number of people sheltering in school:<input type="text" name="n_shelter" placeholder="e.g. 550" required></input><br>
-	Volunteer hours for community service:<input type="text" name="comm_hours" placeholder="e.g. 2000" required></input><br>
+	Area: <input type="text" name="inc_jobs" placeholder="e.g. classroom"/ required><br>
+	Description:<textarea type="text" name="descrip" placeholder="Details about the damage and fixture required" required rows="5"></textarea><br>
+	Estimated cost:<input type="text" name="est_cost" placeholder="e.g. 2000$" required></input><br>
 
 <center><input type="submit" value="Submit Form"></input></center>
 </form>
