@@ -1,3 +1,11 @@
 create table user( id int AUTO_INCREMENT primary key, first_name varchar(25), last_name varchar(25), pwd varchar(10), activation_start date, activation_end date, points int, contact_no varchar(15));
 
 create table roles(role_id int AUTO_INCREMENT primary key,role_name varchar(20));
+
+create table role_map(id int, role_id int, primary key(id, role_id),foreign key(id) references user(id), foreign key(role_id) references roles(role_id) );
+
+create table disaster(disasterid int AUTO_INCREMENT primary key, type varchar(25), disasterdate date, region varchar(25), country varchar(25), state varchar(25), city varchar(25), injuries int, deaths int);
+
+create table demographics(demo_id int AUTO_INCREMENT primary key, region varchar(25), country varchar(25), state varchar(25), city varchar(25), members int, children int, teachers int, girls int, boys int, disasterid int, foreign key(disasterid) references disaster(disasterid));
+
+ 
