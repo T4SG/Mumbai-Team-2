@@ -1,8 +1,8 @@
 <?php
 	define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
-    define('DB_PASSWORD', 'cfg');
-    define('DB_DATABASE', 'cfg');
+    define('DB_PASSWORD', 'code4good');
+    define('DB_DATABASE', 'happy_hearts');
   
 
 ?>
