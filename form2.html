@@ -10,6 +10,61 @@
     	<script type="text/javascript" src="js/jquery.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
+    	<script type="text/javascript">
+function validateForm() {
+    if( document.myForm.reg_ret_rate.value == "" || isNaN(document.myForm.reg_ret_rate.value) || document.myForm.reg_ret_rate.value>100 )
+         {
+            alert( "Please provide retention rate in %" );
+            document.myForm.reg_ret_rate.focus() ;
+            return false;
+         }
+    if( document.myForm.n_sec.value == "" || isNaN(document.myForm.n_sec.value) )
+         {
+            alert( "Please provide students pursuing secondary education" );
+            document.myForm.n_sec.focus() ;
+            return false;
+         }
+         
+    if( document.myForm.inc_lit.value == "" || isNaN(document.myForm.inc_lit.value))
+         {
+            alert( "Please provide increase in general literacy" );
+            document.myForm.inc_lit.focus() ;
+            return false;
+         }  
+         if( document.myForm.inc_complit.value == "" || isNaN(document.myForm.inc_complit.value) )
+         {
+            alert( "Please provide increase in computer literacy!" );
+            document.myForm.inc_complit.focus() ;
+            return false;
+         }
+    if( document.myForm.no_stu.value == "" || isNaN(document.myForm.no_stu.value) )
+         {
+            alert( "Please provide student number" );
+            document.myForm.no_stu.focus() ;
+            return false;
+         }
+         if( document.myForm.no_tea.value == "" || isNaN(document.myForm.no_tea.value) )
+         {
+            alert( "Please provide no_tea number" );
+            document.myForm.no_tea.focus() ;
+            return false;
+         }
+      if( document.myForm.attrate.value == "" || isNaN(document.myForm.attrate.value) || document.myForm.attrate.value>100)
+         {
+
+            alert( "Please provide attendence rate in %" );
+            document.myForm.attrate.focus() ;
+            return false;
+         }   
+     if( document.myForm.r_dropout.value == "select" )
+         {
+            alert( "Please provide the dropout reason!" );
+            return false;
+         }
+     
+return true;
+}
+</script>
 	</head>
 	<body>
 		<div id="page-wrapper">
@@ -37,28 +92,32 @@
 				</div>
 				
 				<div ><!-- form2 --></br>
-					<form style="margin: 0 auto; width:20%">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
 						<h2>Long Term Impact Metrics</h2></br>
 						Retention rate for region(percentage):</br>
-						<input type="text" name="reg_ret_rate" placeholder="e.g. 78"></input></br>
+						<input type="text" name="reg_ret_rate" placeholder="e.g. 78" required></input></br>
 						Number of students persuing secondary education:</br>
-						<input type="text" name="n_sec" placeholder="e.g. 4500"></input></br>
+						<input type="text" name="n_sec" placeholder="e.g. 4500" required></input></br>
 						Most common reason for dropout:</br> 
-						<select name="r_dropout">
+						<select name="r_dropout" required>
+							<option value="select">Select</option>
 							<option value="lack_funds">Lack of family funds</option>
 							<option value="lack_interest">Lack of interest in further studies</option>
 						</select></br></br>
 						Increase in general literacy:</br>
-						<input type="text" name="inc_lit" placeholder="e.g. 30">
+						<input type="text" name="inc_lit" placeholder="e.g. 30" required>
 						</input></br>
 						Increase in computer literacy:</br>
-						<input type="text" name="inc_complit" placeholder="e.g. 45">
+						<input type="text" name="inc_complit" placeholder="e.g. 45" required>
 						</input></br>
-						Student-to-Teacher ratio:</br>
-						<input type="text" name="stratio" placeholder="e.g. 40:1">
+						Number of Students:</br>
+						<input type="text" name="no_stu" placeholder="e.g. 40" required>
+						</input></br>
+						Number of Teachers:</br>
+						<input type="text" name="no_tea" placeholder="e.g. 40" required>
 						</input></br>
 						Attendance rate(percentage):</br>
-						<input type="text" name="attrate" placeholder="e.g. 80">
+						<input type="text" name="attrate" placeholder="e.g. 80" required>
 						</input></br>
 						<input type="submit" value="Submit Form"></input></br>
 					</form>
