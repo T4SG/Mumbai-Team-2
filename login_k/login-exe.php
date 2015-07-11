@@ -68,6 +68,7 @@
 			$member = mysql_fetch_assoc($result);
 			$_SESSION['SESS_MEMBER_ID'] = $member['username'];
 			$_SESSION['SESS_FIRST_NAME'] = $member['Name'];
+			$rolequry="SELECT roll_id FROM rolemap WHERE user_id = (select user_id from users where username = $login)";
 			session_write_close();
 			//Add location here
 			header("location: .php");
