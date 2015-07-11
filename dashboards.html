@@ -7,13 +7,59 @@
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/carousel.css" />
 		<script type="text/javascript">
-    		function showDiv() {
+    		function showDiv() 
+    		{
    				document.getElementById('bargraph').style.display = "block";
    				document.getElementById('piegraph').style.display = "none";
    				document.getElementById('linegraph').style.display = "none";
-
-
+   				
+			    var canvas = document.getElementById('canvas'),
+	            context = canvas.getContext('2d');
+				// resize the canvas to fill browser window dynamically
+			    window.addEventListener('resize', resizeCanvas, false);
+			    function resizeCanvas() 
+			    {
+			        canvas.width = window.innerWidth;
+		            canvas.height = window.innerHeight;
+				            /**
+				             * Your drawings need to be inside this function otherwise they will be reset when 
+				             * you resize the browser window and the canvas goes will be cleared.
+				             */
+				            drawStuff(); 
+				}
+			    resizeCanvas();
+				function drawStuff() 
+				{
+				    	var barChartData = 
+				    	{
+							labels : ["January","February","March","April","May","June","July"],
+							datasets : [
+									{
+										fillColor : "rgba(220,220,220,0.5)",
+										strokeColor : "rgba(220,220,220,0.8)",
+										highlightFill: "rgba(220,220,220,0.75)",
+										highlightStroke: "rgba(220,220,220,1)",
+										data : [80,90,100,110,120,130,140]
+									},
+									{
+										fillColor : "rgba(151,187,205,0.5)",
+										strokeColor : "rgba(151,187,205,0.8)",
+										highlightFill : "rgba(151,187,205,0.75)",
+										highlightStroke : "rgba(151,187,205,1)",
+										data : [10,20,30,40,50,60,70]
+									}
+							]
+						}
+					var ctx = document.getElementById("canvas").getContext("2d");
+						window.myBar = new Chart(ctx).Bar(barChartData, {
+							responsive : true
+						});
+				            // do your drawing stuff here
+				}
 			}
+
+
+			
 			function showDivpie() {
    				document.getElementById('bargraph').style.display = "none";
    				document.getElementById('piegraph').style.display = "block";
@@ -61,8 +107,8 @@
 				<div><!-- dashboard -->
 					
 					<div id="bargraph"  style="display:none; " > 
-						<iframe id="myFrame" src="bar.html" style="border:none;" height="650px" scrolling="yes" width="100%" ></iframe>
-						<!-- <canvas id="canvas" height="400PX" width="600PX"></canvas> -->
+						<!-- <iframe id="myFrame" src="bar.html" style="border:none;" height="650px" scrolling="yes" width="100%" ></iframe> -->
+						<canvas id="canvas" height="400PX" width="600PX"></canvas>
 					</div>
 					<div id="piegraph"  style="display:none; " > 
 						<iframe id="myFrame" src="pie.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
@@ -190,7 +236,7 @@
 	    	<script src="js/skel.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/Chart.js"></script>
-			<script src="js/grapher.js"></script>    
+			<!--<script src="js/grapher.js"></script>-->    
 	    	<script src="js/main.js"></script>
 			
 	</body>
