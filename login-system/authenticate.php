@@ -10,7 +10,8 @@
 		$username = $_POST['username'];
 	}
 	if (isset($_POST['password'])) {
-		$password = $_POST['password'];
+		$password = sha1(sha1($_POST['password']).$_POST['password']);
+		
 
 	}
 	
