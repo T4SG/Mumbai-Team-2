@@ -54,10 +54,10 @@
 	
 		exit();
 	}
-	header("location: try.html");
+//	header("location: try.html");
 
 	//Create query
-/*	$qry="SELECT * FROM login WHERE username='$login' AND password='$password'";
+	$qry="SELECT * FROM user WHERE email='$login' AND pwd='$password'";
 	$result=mysql_query($qry);
 	
 	//Check whether the query was successful or not
@@ -66,12 +66,12 @@
 			//Login Successful
 			session_regenerate_id();
 			$member = mysql_fetch_assoc($result);
-			$_SESSION['SESS_MEMBER_ID'] = $member['username'];
-			$_SESSION['SESS_FIRST_NAME'] = $member['Name'];
-			$rolequry="SELECT roll_id FROM rolemap WHERE user_id = (select user_id from users where username = $login)";
+			$_SESSION['SESS_MEMBER_ID'] = $member['email'];
+			$_SESSION['SESS_FIRST_NAME'] = $member['pwd'];
+		//	$rolequry="SELECT roll_id FROM rolemap WHERE user_id = (select user_id from users where username = $login)";
 			session_write_close();
 			//Add location here
-			header("location: .php");
+			header("location: dashboards.html");
 			exit();
 		}else {
 			//Login failed
@@ -83,5 +83,5 @@
 	}else {
 		$_SESSION['logfail2'] = "fail";
 		die("Query failed");
-	}   */
-?>
+	}   
+	?>
