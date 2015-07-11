@@ -18,6 +18,13 @@
 
 
 			}
+			function showDivLine() {
+   				document.getElementById('bargraph').style.display = "none";
+   				document.getElementById('piegraph').style.display = "none";
+   				document.getElementById('linegraph').style.display = "block";
+
+
+			}
 			
     	</script>
 		
@@ -51,16 +58,16 @@
 				
 				<div><!-- dashboard -->
 					
-					<div id="bargraph"  style="display:none; margin:0px 600px; " > 
-						<iframe id="myFrame" src="bar.html" style="border:none;" height="800" scrolling="yes" width="1200" ></iframe>
+					<div id="bargraph"  style="display:none; " > 
+						<iframe id="myFrame" src="bar.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
 
 					</div>
-					<div id="piegraph"  style="display:none; margin:0px 600px; " > 
-						<iframe id="myFrame" src="bar.html" style="border:none;" height="800" scrolling="yes" width="1200" ></iframe>
+					<div id="piegraph"  style="display:none; " > 
+						<iframe id="myFrame" src="pie.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
 
 					</div>
-					<div id="linegraph"  style="display:none; margin:0px 600px; " > 
-						<iframe id="myFrame" src="bar.html" style="border:none;" height="800" scrolling="yes" width="1200" ></iframe>
+					<div id="linegraph"  style="display:none;" > 
+						<iframe id="myFrame" src="line.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
 
 					</div>
 				</div>
@@ -83,18 +90,18 @@
 								<div class="box highlight">
 									<i class="icon major fa-paper-plane" onclick="showDiv()"></i>
 									<h3>This Is Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+									<p>Bar graph</p>
 								</div>
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-									<i class="icon major fa-pencil"></i>
+									<i class="icon major fa-pencil" ></i>
 									<h3>Also Important</h3>
 									<p>put text</p>
 								</div>
 							</section>
 							<section class="4u 12u(narrower)">
-								<div class="box highlight">
+								<div class="box highlight" onclick="showDivLine()">
 									<i class="icon major fa-wrench"></i>
 									<h3>Probably Important</h3>
 									<p>push</p>
