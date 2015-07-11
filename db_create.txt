@@ -17,3 +17,5 @@ create table school_fixtures(id int AUTO_INCREMENT primary key, school_id int, d
 create table school_infra(school_id int primary key, no_classrooms int, comp_lab bool, no_comps int, no_phones int, no_textbooks int, property_val double, foreign key(school_id) references school(school_id));
 
 create table school_infra(id int primary key, school_id int, no_classrooms int, comp_lab bool, no_comp int, no_text int, no_phone int, prop_val double, foreign key(school_id) references school(school_id));
+
+ALTER TABLE `user` ADD `email` VARCHAR(50) NOT NULL AFTER `contact_no`;
