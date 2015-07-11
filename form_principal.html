@@ -88,15 +88,17 @@ function validateForm() {
             alert( "Please provide the dropout reason!" );
             return false;
          }
-      var x=parseInt(document.getElementById("boy_per").value);
-      var y=parseInt(document.getElementById("girl_per").value);
-      var z=parseInt(document.getElementById("attrate").value);
-      var w=parseInt(document.getElementById("r_rate").value); 
-    if(x.checkValidity()){
-    	alert("Enter the values between 1 and 100 for percentage based inputs(boys)");
+      var x=document.getElementById("boy_per");
+      //var y=parseInt(document.getElementById("girl_per").value);
+      //var z=parseInt(document.getElementById("attrate").value);
+      //var w=parseInt(document.getElementById("r_rate").value); 
+    if(x.checkValidity()==false){
+    	//alert("Enter the values between 1 and 100 for percentage based inputs(boys)");
+    	document.getElementById("v1").innerHTML=x.validationMessage;
+
     	return false;
     }
-    if(y<1||y>100){
+    /*if(y<1||y>100){
     	alert("Enter the values between 1 and 100 for percentage based inputs girls");
     	return false;
     }
@@ -107,7 +109,7 @@ function validateForm() {
     if(w<1||w>100){
     	alert("Enter the values between 1 and 100 for percentage based inputs Retention rate");
     	return false;
-    }  
+    }  */
 
          return( true );     
 }
@@ -122,7 +124,7 @@ function validateForm() {
 	<td>Number of students enrolled:</td><td><input type="text" name="no_stu" placeholder="e.g. 200" required></input></td>
 	</tr>
     <tr>
-	<td>Boys(percentage):</td><td><input type="text" name="boy_per" placeholder="e.g. 45" required></input></td>
+	<td>Boys(percentage):</td><td><input type="text" name="boy_per" placeholder="e.g. 45" required min="1" max="100"></input></td>
 	</tr>
 	<tr>
 	<td>Girls(percentage):</td><td><input type="text" name="girl_per" placeholder="e.g. 55" required></input></td>
