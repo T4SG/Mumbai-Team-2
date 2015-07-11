@@ -8,4 +8,8 @@ create table disaster(disasterid int AUTO_INCREMENT primary key, type varchar(25
 
 create table demographics(demo_id int AUTO_INCREMENT primary key, region varchar(25), country varchar(25), state varchar(25), city varchar(25), members int, children int, teachers int, girls int, boys int, disasterid int, foreign key(disasterid) references disaster(disasterid));
 
+create table school(school_id int AUTO_INCREMENT PRIMARY KEY, school_name varchar(30), region varchar(25), country varchar(25), state varchar(25), city varchar(25), date_rebuilt date, sem_begin varchar(20), sem_end varchar(20), type varchar(20), hhf boolean, director_id int, foreign key(director_id) references user(id));
+
+create table school_info(school_id int, date_updated date, children int, teachers int, girls int, boys int, new_enroll int, no_left int,foreign key(school_id) references school(school_id), primary key(school_id,date_updated));
+
  
