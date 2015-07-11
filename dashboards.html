@@ -64,7 +64,64 @@
    				document.getElementById('bargraph').style.display = "none";
    				document.getElementById('piegraph').style.display = "block";
    				document.getElementById('linegraph').style.display = "none";
+   				var canvas = document.getElementById('canvas2'),
+	            context = canvas.getContext('2d');
+				// resize the canvas to fill browser window dynamically
+			    window.addEventListener('resize', resizeCanvas, false);
+			    function resizeCanvas() 
+			    {
+			        canvas.width = window.innerWidth;
+		            canvas.height = window.innerHeight;
+				            /**
+				             * Your drawings need to be inside this function otherwise they will be reset when 
+				             * you resize the browser window and the canvas goes will be cleared.
+				             */
+				            drawStuff(); 
+				}
+			    resizeCanvas();
+				function drawStuff() 
+				{
+								
+					var pieData = [
+							{
+								value: 300,
+								color:"#F7464A",
+								highlight: "#FF5A5E",
+								label: "Red"
+							},
+							{
+								value: 50,
+								color: "#46BFBD",
+								highlight: "#5AD3D1",
+								label: "Green"
+							},
+							{
+								value: 100,
+								color: "#FDB45C",
+								highlight: "#FFC870",
+								label: "Yellow"
+							},
+							{
+								value: 40,
+								color: "#949FB1",
+								highlight: "#A8B3C5",
+								label: "Grey"
+							},
+							{
+								value: 120,
+								color: "#4D5360",
+								highlight: "#616774",
+								label: "Dark Grey"
+							}
+
+						];
+
+					var ctx = document.getElementById("canvas2").getContext("2d");
+					window.myPie = new Chart(ctx).Pie(pieData);
+				            // do your drawing stuff here
+				}
 			}
+			
 			function showDivLine() {
    				document.getElementById('bargraph').style.display = "none";
    				document.getElementById('piegraph').style.display = "none";
@@ -111,7 +168,8 @@
 						<canvas id="canvas" height="400PX" width="600PX"></canvas>
 					</div>
 					<div id="piegraph"  style="display:none; " > 
-						<iframe id="myFrame" src="pie.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
+												<canvas id="canvas2" height="400PX" width="600PX"></canvas>
+
 
 					</div>
 					<div id="linegraph"  style="display:none;" > 
