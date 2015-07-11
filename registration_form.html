@@ -15,75 +15,81 @@
     if( document.myForm.school_name.value == "")
          {
             alert( "Please provide the school name!" );
-            document.myForm.reg_ret_rate.focus() ;
+            document.myForm.school_name.focus() ;
             return false;
          }
     if( document.myForm.region.value == "" )
          {
             alert( "Please provide region!" );
-            document.myForm.n_sec.focus() ;
+            document.myForm.region.focus() ;
             return false;
          }
          
     if( document.myForm.country.value == "")
          {
             alert( "Please provide country!" );
-            document.myForm.inc_lit.focus() ;
+            document.myForm.country.focus() ;
             return false;
          }  
          if( document.myForm.state.value == "" )
          {
             alert( "Please provide state!" );
-            document.myForm.inc_complit.focus() ;
+            document.myForm.state.focus() ;
             return false;
          }
     if( document.myForm.rebuild_date.value == "" )
          {
             alert( "Please provide rebuild date" );
-            document.myForm.no_stu.focus() ;
+            document.myForm.rebuild_date.focus() ;
             return false;
          }
          if( document.myForm.start_month.value == "" || document.myForm.start_month.value == "Month")
          {
             alert( "Please provide start month." );
-            document.myForm.no_tea.focus() ;
+            document.myForm.start_month.focus() ;
             return false;
          }
       if( document.myForm.end_month.value == "" || document.myForm.end_month.value == "Month")
          {
 
             alert( "Please provide end month." );
-            document.myForm.attrate.focus() ;
+            document.myForm.end_month.focus() ;
             return false;
          }   
      if( document.myForm.type.value == "Type" )
          {
             alert( "Please provide the type!" );
+			document.myForm.type.focus() ;
             return false;
          }
 	if( document.myForm.first_name.value == "" )
          {
             alert( "Please provide the first name!" );
+			document.myForm.first_name.focus() ;
             return false;
          }
 	if( document.myForm.last_name.value == "")
          {
             alert( "Please provide the last name!" );
+			document.myForm.last_name.focus() ;
             return false;
          }
 	if( document.myForm.password.value == ""|| document.myForm.password.value.len()<8 )
          {
             alert( "Please provide the password!" );
+			document.myForm.password.focus() ;
             return false;
          }
 	if( document.myForm.contact_no.value == ""|| isNaN(document.myForm.contact_no.value) )
          {
             alert( "Please provide the contact number!" );
+			document.myForm.contact_no.focus() ;
             return false;
          }   
 	if( document.myForm.email_id.value == "")
          {
             alert( "Please provide the Email ID!" );
+			document.myForm.email_id.focus() ;
             return false;
          }
 return true;
