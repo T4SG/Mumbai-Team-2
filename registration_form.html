@@ -10,10 +10,131 @@
     	<script type="text/javascript" src="js/jquery.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
-    	
-		
-		
+    	<script>
+		function validateForm() {
+    if( document.myForm.school_name.value == "")
+         {
+            alert( "Please provide the school name!" );
+            document.myForm.reg_ret_rate.focus() ;
+            return false;
+         }
+    if( document.myForm.region.value == "" )
+         {
+            alert( "Please provide region!" );
+            document.myForm.n_sec.focus() ;
+            return false;
+         }
+         
+    if( document.myForm.country.value == "")
+         {
+            alert( "Please provide country!" );
+            document.myForm.inc_lit.focus() ;
+            return false;
+         }  
+         if( document.myForm.state.value == "" )
+         {
+            alert( "Please provide state!" );
+            document.myForm.inc_complit.focus() ;
+            return false;
+         }
+    if( document.myForm.rebuild_date.value == "" )
+         {
+            alert( "Please provide rebuild date" );
+            document.myForm.no_stu.focus() ;
+            return false;
+         }
+         if( document.myForm.start_month.value == "" || document.myForm.start_month.value == "Month")
+         {
+            alert( "Please provide start month." );
+            document.myForm.no_tea.focus() ;
+            return false;
+         }
+      if( document.myForm.end_month.value == "" || document.myForm.end_month.value == "Month")
+         {
 
+            alert( "Please provide end month." );
+            document.myForm.attrate.focus() ;
+            return false;
+         }   
+     if( document.myForm.type.value == "Type" )
+         {
+            alert( "Please provide the type!" );
+            return false;
+         }
+	if( document.myForm.first_name.value == "" )
+         {
+            alert( "Please provide the first name!" );
+            return false;
+         }
+	if( document.myForm.last_name.value == "")
+         {
+            alert( "Please provide the last name!" );
+            return false;
+         }
+	if( document.myForm.password.value == ""|| document.myForm.password.value.len()<8 )
+         {
+            alert( "Please provide the password!" );
+            return false;
+         }
+	if( document.myForm.contact_no.value == ""|| isNaN(document.myForm.contact_no.value) )
+         {
+            alert( "Please provide the contact number!" );
+            return false;
+         }   
+	if( document.myForm.email_id.value == "")
+         {
+            alert( "Please provide the Email ID!" );
+            return false;
+         }
+return true;
+}
+// Regions
+var country_arr = new Array("Australia","Bangladesh","China","India","Japan","Pakistan","Sri Lanka");
+// States
+var s_a = new Array();
+s_a[0] = "";
+s_a[1] = "Australian Capital Territory|New South Wales|Northern Territory|Queensland|South Australia|Tasmania|Victoria|Western Australia";
+s_a[2] = "Barguna|Barisal|Bhola|Jhalokati|Patuakhali|Pirojpur|Bandarban|Brahmanbaria|Chandpur|Chittagong|Comilla|Cox's Bazar|Feni|Khagrachari|Lakshmipur|Noakhali|Rangamati|Dhaka|Faridpur|Gazipur|Gopalganj|Jamalpur|Kishoreganj|Madaripur|Manikganj|Munshiganj|Mymensingh|Narayanganj|Narsingdi|Netrokona|Rajbari|Shariatpur|Sherpur|Tangail|Bagerhat|Chuadanga|Jessore|Jhenaidah|Khulna|Kushtia|Magura|Meherpur|Narail|Satkhira|Bogra|Dinajpur|Gaibandha|Jaipurhat|Kurigram|Lalmonirhat|Naogaon|Natore|Nawabganj|Nilphamari|Pabna|Panchagarh|Rajshahi|Rangpur|Sirajganj|Thakurgaon|Habiganj|Maulvi bazar|Sunamganj|Sylhet";
+s_a[3] = "Anhui|Beijing|Chongqing|Fujian|Gansu|Guangdong|Guangxi|Guizhou|Hainan|Hebei|Heilongjiang|Henan|Hubei|Hunan|Jiangsu|Jiangxi|Jilin|Liaoning|Nei Mongol|Ningxia|Qinghai|Shaanxi|Shandong|Shanghai|Shanxi|Sichuan|Tianjin|Xinjiang|Xizang (Tibet)|Yunnan|Zhejiang";
+s_a[4] = "Andaman and Nicobar Islands|Andhra Pradesh|Arunachal Pradesh|Assam|Bihar|Chandigarh|Chhattisgarh|Dadra and Nagar Haveli|Daman and Diu|Delhi|Goa|Gujarat|Haryana|Himachal Pradesh|Jammu and Kashmir|Jharkhand|Karnataka|Kerala|Lakshadweep|Madhya Pradesh|Maharashtra|Manipur|Meghalaya|Mizoram|Nagaland|Orissa|Pondicherry|Punjab|Rajasthan|Sikkim|Tamil Nadu|Tripura|Uttar Pradesh|Uttaranchal|West Bengal";
+s_a[5] = "Aichi|Akita|Aomori|Chiba|Ehime|Fukui|Fukuoka|Fukushima|Gifu|Gumma|Hiroshima|Hokkaido|Hyogo|Ibaraki|Ishikawa|Iwate|Kagawa|Kagoshima|Kanagawa|Kochi|Kumamoto|Kyoto|Mie|Miyagi|Miyazaki|Nagano|Nagasaki|Nara|Niigata|Oita|Okayama|Okinawa|Osaka|Saga|Saitama|Shiga|Shimane|Shizuoka|Tochigi|Tokushima|Tokyo|Tottori|Toyama|Wakayama|Yamagata|Yamaguchi|Yamanashi";
+s_a[6] = "Balochistan|Federally Administered Tribal Areas|Islamabad Capital Territory|North-West Frontier Province|Punjab|Sindh";
+s_a[7] = "Central|Eastern|North Central|North Eastern|North Western|Northern|Sabaragamuwa|Southern|Uva|Western";
+function populateStates(countryElementId, stateElementId) {
+
+    var selectedCountryIndex = document.getElementById(countryElementId).selectedIndex;
+
+    var stateElement = document.getElementById(stateElementId);
+
+    stateElement.length = 0; // Fixed by Julian Woods
+    stateElement.options[0] = new Option('Select State', '');
+    stateElement.selectedIndex = 0;
+
+    var state_arr = s_a[selectedCountryIndex].split("|");
+
+    for (var i = 0; i < state_arr.length; i++) {
+        stateElement.options[stateElement.length] = new Option(state_arr[i], state_arr[i]);
+    }
+}
+function populateCountries(countryElementId, stateElementId) {
+    // given the id of the <select> tag as function argument, it inserts <option> tags
+    var countryElement = document.getElementById(countryElementId);
+    countryElement.length = 0;
+    countryElement.options[0] = new Option('Select Country', '-1');
+    countryElement.selectedIndex = 0;
+    for (var i = 0; i < country_arr.length; i++) {
+        countryElement.options[countryElement.length] = new Option(country_arr[i], country_arr[i]);
+    }
+
+    // Assigned all countries. Now assign event listener for the states.
+
+    if (stateElementId) {
+        countryElement.onchange = function () {
+            populateStates(countryElementId, stateElementId);
+        };
+    }
+}
+</script>
 	</head>
 	<title>Registration Form</title>
 	<body>
@@ -42,44 +163,32 @@
 				</div>
 				
 				<div ><!-- form2 -->
-					<form style="margin: 0 auto; width:20%">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
 						School Name:</br>
 						<input type="text" name="school_name" placeholder="e.g. St.Paul's School"></input></br>
 						Region:</br>
 						<select name="region">
-							<option value="Americas">Americas</option>
 							<option value="Asia Pacific">Asia Pacific</option>
-							<option value="Europe">Europe</option>
 						</select></br></br>
-						Country:</br>
-						<select name="country">
-							<option value="India">India</option>
-							<option value="Mexico">Mexico</option>
-							<option value="Thailand">Thailand</option>
-							<option value="Spain">Spain</option>
-							<option value="Japan">Japan</option>
-						</select></br></br>
-						State:</br>
-						<select name="State">
-							<option value="India">Maharahstra</option>
-							<option value="Mexico">Mexico1</option>
-							<option value="Thailand">Thailand1</option>
-							<option value="Spain">Spain1</option>
-							<option value="Japan">Japan1</option>
-						</select></br></br>
-						City:</br>
-						<select name="city">
-							<option value="Mumbai">Mumbai</option>
-							<option value="Mexico City">Mexico City</option>
-							<option value="Bangkok">Bangkok</option>
-							<option value="Madrid">Madrid</option>
-							<option value="Tokyo">Tokyo</option>
-						</select></br></br>
+						<br/>Country:
+							<select id="country" name="country">
+							<script language="javascript">
+								populateRegions("region","country");
+							</script>
+							</select>
+							<br />State:
+							<select name="state" id="state"></select>
+							<br/>
+							<br />Select Country (without states):
+							<script language="javascript">
+								populateCountries("country", "state");
+							</script>
 						Date Rebuilt:</br>
 						<input type="date" name="rebuild_date">
 						</input></br>
 						Semester start month:</br>
 						<select name="start_month">
+							<option value="Month">Month</option>
 							<option value="January">January</option>
 							<option value="February">February</option>
 							<option value="March">March</option>
@@ -95,6 +204,7 @@
 						</select></br>
 						Semester end month:</br>
 						<select name="end_month">
+							<option value="Month">Month</option>
 							<option value="January">January</option>
 							<option value="February">February</option>
 							<option value="March">March</option>
@@ -110,6 +220,7 @@
 						</select></br>
 						Type of school:</br>
 						<select name="type">
+							<option value="Type">Type</option>
 							<option value="government">Government</option>
 							<option value="private">Private</option>
 						</select></br>
@@ -119,15 +230,13 @@
 						<input type="text" name="first_name" placeholder="e.g. John"></input></br>
 						Last Name:</br>
 						<input type="text" name="last_name" placeholder="e.g. Smith"></input></br>
-						User Name:</br>
-						<input type="text" name="user_name" placeholder="e.g. johnsmith31"></input></br>
 						Password:</br>
 						Enter a string of at least 8 characters. The string must contain at least one number.
 						<input type="password" name="password" placeholder="e.g. pass@123"></input></br>
 						Contact Number:</br>
 						<input type="text" name="contact_no" placeholder="e.g. 9876543210"></input></br>
 						Email ID:</br>
-						<input type="text" name="user_name" placeholder="e.g. johnsmith31@example.com"></input></br>
+						<input type="text" name="email_id" placeholder="e.g. johnsmith31@example.com"></input></br>
 						<center><input type="submit" value="Submit"></input>
 					</form>
 				</div>
