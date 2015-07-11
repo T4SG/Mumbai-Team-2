@@ -3,3 +3,6 @@ INSERT INTO `happy_hearts`.`user` (`id`, `first_name`, `last_name`, `pwd`, `acti
 
 "DELETE FROM `happy_hearts`.`user` WHERE `user`.`id` = 2"?
 
+INSERT INTO `happy_hearts`.`roles` (`role_id`, `role_name`) VALUES (NULL, 'Admin');
+
+INSERT INTO `happy_hearts`.`role_map` (`id`, `role_id`) VALUES ('1', '2');
