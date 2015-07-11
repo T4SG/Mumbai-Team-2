@@ -12,6 +12,12 @@
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
     	<script>
 		function validateForm() {
+		var currentDate = new Date()
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1;
+    var year = currentDate.getFullYear();
+    var my_date = year+"-"+month+"-"+day;
+    document.getElementById("date_updated").value=my_date;
     
 	if( document.myForm.first_name.value == "" )
          {
@@ -88,6 +94,7 @@ return true;
 						<input type="text" name="contact_no" placeholder="e.g. 9876543210"></input></br>
 						Email ID:</br>
 						<input type="text" name="email_id" placeholder="e.g. johnsmith31@example.com"></input></br>
+						<input type="text" name="systemdate" id="date_updated" value='' hidden/><br>
 						<center><input type="submit" value="Submit"></input>
 					</form>
 				</div>

@@ -1,10 +1,10 @@
 <?php
-$con=mysqli_connect("localhost","goldenleaf","larry_goldenleaf","hhf");
+$con=mysqli_connect("localhost","root","code4good","happy_hearts");
 function DetailsInsert($con)
 {
  	
  		//$query="INSERT into customers ('check_in', 'check-out', 'room_type', 'adults_per_room', 'children_0_5', 'children_6_12') VALUES ('$checkin.','$checkout','$roomtype','$adults','$child0','$child6');"; 
-	$query="INSERT INTO `hhf`.`user` ( `first_name`, `last_name`, `pwd`, `contact_no`, `email`) VALUES ('".$_POST["first_name"]."','".$_POST["last_name"]."','".$_POST["password"]."','".$_POST["contact_no"]."','".$_POST["email_id"]."');"; //id is auto increment
+	$query="INSERT INTO `happy_hearts`.`user` ( `first_name`, `last_name`, `pwd`, `activation_start`,`contact_no`, `email`) VALUES ('".$_POST["first_name"]."','".$_POST["last_name"]."','".$_POST["password"]."','".$_POST["systemdate"]."','".$_POST["contact_no"]."','".$_POST["email_id"]."');"; //id is auto increment
 	
 	/*echo $query;*/
 	if(mysqli_query($con,$query)) //Runs the query and returns boolean variable.
