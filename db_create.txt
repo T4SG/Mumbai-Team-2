@@ -1,0 +1,3 @@
+create table user( id int AUTO_INCREMENT primary key, first_name varchar(25), last_name varchar(25), pwd varchar(10), activation_start date, activation_end date, points int, contact_no varchar(15));
+
+create table roles(role_id int AUTO_INCREMENT primary key,role_name varchar(20));
