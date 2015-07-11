@@ -10,9 +10,36 @@
     	<script type="text/javascript" src="js/jquery.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
-    	
-		
-		
+    	<script type="text/javascript">
+function validateForm() {
+    if( document.myForm.inc_incr.value == "" || isNaN(document.myForm.inc_incr.value) )
+         {
+            alert( "Please provide increase in average household income" );
+            document.myForm.inc_incr.focus() ;
+            return false;
+         }
+    if( document.myForm.inc_jobs.value == "" || isNaN(document.myForm.inc_jobs.value) )
+         {
+            alert( "Please provide increase in number of jobs" );
+            document.myForm.inc_jobs.focus() ;
+            return false;
+         }
+         
+    if( document.myForm.n_shelter.value == "" || isNaN(document.myForm.n_shelter.value))
+         {
+            alert( "Please provide number of people sheltering in school" );
+            document.myForm.n_shelter.focus() ;
+            return false;
+         }  
+         if( document.myForm.comm_hours.value == "" || isNaN(document.myForm.comm_hours.value) )
+         {
+            alert( "Please provide Volunteer hours" );
+            document.myForm.comm_hours.focus() ;
+            return false;
+         }
+      return true;
+	}	
+	</script>	
 
 	</head>
 	<body>
@@ -40,19 +67,18 @@
 
 				</div>
 				
-				<div align='centre'><!-- form3 -->
+				<div align='centre'><!-- form3 --><br>
 					
-<form style= "margin: 0 auto; width:20%">
-<fieldset>
-    <legend>Economic Metrics</legend>
+<form style= "margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
+    <h2>Economic Metrics</h2>
 	
 	
-	Increase in average household income: <input type="text" name="inc_incr" placeholder="e.g. 20000"></input>
+	Increase in average household income: <input type="text" name="inc_incr" placeholder="e.g. 20000" required></input>
 	<br>
-	Increase in number of jobs in area: <input type="text" name="inc_jobs" placeholder="e.g. 450"/><br>
-	Number of people sheltering in school:<input type="text" name="n_shelter" placeholder="e.g. 550"></input><br>
-	Volunteer hours for community service:<input type="text" name="comm_hours" placeholder="e.g. 2000"></input><br>
-</fieldset>
+	Increase in number of jobs in area: <input type="text" name="inc_jobs" placeholder="e.g. 450"/ required><br>
+	Number of people sheltering in school:<input type="text" name="n_shelter" placeholder="e.g. 550" required></input><br>
+	Volunteer hours for community service:<input type="text" name="comm_hours" placeholder="e.g. 2000" required></input><br>
+
 <center><input type="submit" value="Submit Form"></input></center>
 </form>
 				</div>
