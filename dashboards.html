@@ -6,17 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/carousel.css" />
-		<script type="text/javascript" src="js/jquery.js"></script>
-    	<script type="text/javascript" src="js/jquery.min.js"></script>
-    	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
-    	<script type="text/javascript" src="js/bootstrap.js"></script>     
-    	<script type="text/javascript">
+		<script type="text/javascript">
     		function showDiv() {
    				document.getElementById('bargraph').style.display = "block";
    				document.getElementById('piegraph').style.display = "none";
    				document.getElementById('linegraph').style.display = "none";
 
 
+			}
+			function showDivpie() {
+   				document.getElementById('bargraph').style.display = "none";
+   				document.getElementById('piegraph').style.display = "block";
+   				document.getElementById('linegraph').style.display = "none";
 			}
 			function showDivLine() {
    				document.getElementById('bargraph').style.display = "none";
@@ -32,6 +33,7 @@
 
 	</head>
 	<body>
+
 		<div id="page-wrapper">
 				<div id="header">
 						<h1><a href="index.html" id="logo"><em>Happy Hearts Fund</em></a></h1>
@@ -59,8 +61,8 @@
 				<div><!-- dashboard -->
 					
 					<div id="bargraph"  style="display:none; " > 
-						<iframe id="myFrame" src="bar.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
-
+						<iframe id="myFrame" src="bar.html" style="border:none;" height="650px" scrolling="yes" width="100%" ></iframe>
+						<!-- <canvas id="canvas" height="400PX" width="600PX"></canvas> -->
 					</div>
 					<div id="piegraph"  style="display:none; " > 
 						<iframe id="myFrame" src="pie.html" style="border:none;" height="400" scrolling="yes" width="600" ></iframe>
@@ -95,7 +97,7 @@
 							</section>
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-									<i class="icon major fa-pencil" ></i>
+									<i class="icon major fa-pencil" onclick="showDivpie()"></i>
 									<h3>Also Important</h3>
 									<p>put text</p>
 								</div>
@@ -183,9 +185,13 @@
 		<!-- Scripts -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.dropotron.min.js"></script>
-			<script src="js/skel.min.js"></script>
+			<script type="text/javascript" src="js/bootstrap.min.js"></script>     
+	    	<script type="text/javascript" src="js/bootstrap.js"></script> 
+	    	<script src="js/skel.min.js"></script>
 			<script src="js/util.js"></script>
-			<script src="js/main.js"></script>
-
+			<script src="js/Chart.js"></script>
+			<script src="js/grapher.js"></script>    
+	    	<script src="js/main.js"></script>
+			
 	</body>
 </html>
