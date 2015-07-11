@@ -12,4 +12,8 @@ create table school(school_id int AUTO_INCREMENT PRIMARY KEY, school_name varcha
 
 create table school_info(school_id int, date_updated date, children int, teachers int, girls int, boys int, new_enroll int, no_left int,foreign key(school_id) references school(school_id), primary key(school_id,date_updated));
 
- 
+create table school_fixtures(id int AUTO_INCREMENT primary key, school_id int, date_detected date, area varchar(20), description varchar(50), cost_repair int, foreign key(school_id) references school(school_id));
+
+create table school_infra(id int primary key, school_id int, no_classrooms int, comp_lab bool, no_comp int, no_text int, no_phone int, prop_val double, foreign key(school_id) references school(school_id));
+
+ALTER TABLE `user` ADD `email` VARCHAR(50) NOT NULL AFTER `contact_no`;
