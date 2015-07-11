@@ -10,7 +10,12 @@
     	<script type="text/javascript" src="js/jquery.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
-    	
+    	<script type="text/javascript">
+    		function showDiv() {
+   				document.getElementById('bargraph').style.display = "block";
+			}
+			
+    	</script>
 		
 		
 
@@ -21,7 +26,7 @@
 						<h1><a href="index.html" id="logo"><em>Happy Hearts Fund</em></a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="dashboard.html">Home</a></li>
+								<li class="current"><a href="dashboards.html">Home</a></li>
 								<li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -42,6 +47,11 @@
 				
 				<div><!-- dashboard -->
 					
+					<div id="bargraph"  style="display:none;" > 
+						<div style="width: 50%">
+							<canvas id="canvas" height="100%" width="100%"></canvas>
+						</div>
+					</div>
 				</div>
 
 				
@@ -53,13 +63,14 @@
 					</header>
 				</section>
 
+
 			<!-- Highlights -->
 				<section class="wrapper style1">
 					<div class="container">
 						<div class="row 200%">
 							<section class="4u 12u(narrower)">
 								<div class="box highlight">
-									<i class="icon major fa-paper-plane"></i>
+									<i class="icon major fa-paper-plane" onclick="showDiv()"></i>
 									<h3>This Is Important</h3>
 									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
 								</div>
