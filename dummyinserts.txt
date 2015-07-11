@@ -1,0 +1,5 @@
+INSERT INTO `happy_hearts`.`user` (`id`, `first_name`, `last_name`, `pwd`, `activation_start`, `activation_end`, `points`, `contact_no`, `email`) VALUES (NULL, 'Sam', 'Fernandes', 'pass@123', '2015-07-08', '2015-07-18', '2', '9874563215', 'sam@gmail.com');
+
+
+"DELETE FROM `happy_hearts`.`user` WHERE `user`.`id` = 2"?
+
