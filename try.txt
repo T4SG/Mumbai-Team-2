@@ -1,0 +1,65 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Responsive Theme</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<meta name="viewport" content="width:device-width,initial-scale=1.0">
+</head>
+
+<body class="body">
+	<?php
+	session_start();
+	include('head.php');
+	?>
+
+	<div id="mainContent">
+		<div class="content">
+			<article class="topContent">
+					
+				<content>
+					<form id="form" action="login-exe.php" method="post">
+					
+				<h2>Sign In</h2>
+			
+						<p><label for="Username">Username : &nbsp</label><input type="text" name="Username"/></p><br>
+						<p><label for="Password">Password : &nbsp</label><input type="password" name="Password" /></p><br>
+						<input type="submit" value="Sign In" class="button" />
+					
+
+					<!--<div id="row"><label for="Username">Username : &nbsp;</label><input type="text" name="Username" /></div>
+					<div id="row"><label for="Password">Password : &nbsp;</label><input type="password" name="Password" /></div>
+					<div id="row">
+						<input type="submit" value="Sign In" class="button" /></div> -->
+		</form>
+
+
+
+				</content>
+			</article>
+			
+
+			
+			
+		</div>
+	</div>
+	
+	<aside class="top-sidebar">
+		<article>
+			<h2>Important Tips</h2>
+			<p>Sign in and have fun</p>
+		</article>
+	</aside>
+	
+
+	<footer class="mainFooter">
+		<p>Copyright &copy; Shreyansh</p>
+	</footer>
+</body>
+
+</html>
