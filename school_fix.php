@@ -113,10 +113,11 @@ function validateForm() {
 				
 				<div align='centre'><!-- form3 --><br>
 					
-<form style= "margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
+<form style= "margin: 0 auto; width:20%" name="myForm" action="insert_schoolfix.php" onsubmit="return (validateForm());" method="post">
     <h2>School Fixtures</h2>
 	
-	
+	School id:<br> <input type="text" name="school_id" placeholder="eg: 1" required style="width: 65px; float:left;"></input>
+	<br>
 	Date of damage:<br> <input type="text" name="YYYY" placeholder="YYYY" required style="width: 65px; float:left;"></input><input type="text" name="MM" placeholder="MM" required style="width: 50px; float:left;"></input><input type="text" name="DD" placeholder="DD" required style="width: 50px;"></input>
 	<br>
 	Area: <input type="text" name="area" placeholder="e.g. classroom"/ required><br>
