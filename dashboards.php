@@ -84,7 +84,7 @@
 								
 					var pieData = [
 							{
-								value: school_id,
+								value: 100,
 								color:"#F7464A",
 								highlight: "#FF5A5E",
 								label: "school_id"

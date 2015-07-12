@@ -38,7 +38,7 @@ session_start();
 		//	$rolequry="SELECT roll_id FROM rolemap WHERE user_id = (select user_id from users where username = $login)";
 			session_write_close();
 			//Add location here
-			header("location: dashboards.html");
+			header("location: dashboards.php");
 			exit();
 		}else {
 			//Login failed
@@ -137,7 +137,7 @@ session_start();
 								
 					var pieData = [
 							{
-								value: school_id,
+								value: 100,
 								color:"#F7464A",
 								highlight: "#FF5A5E",
 								label: "school_id"

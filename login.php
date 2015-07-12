@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,9 +11,50 @@
     	<script type="text/javascript" src="js/jquery.min.js"></script>
     	<script type="text/javascript" src="js/bootstrap.min.js"></script>     
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
-    	
-		
-		
+    	<script type="text/javascript">
+function validateForm() {
+    if( document.myForm.YYYY.value == "" || isNaN(document.myForm.YYYY.value) )
+         {
+            alert( "Provide the proper year" );
+            document.myForm.YYYY.focus() ;
+            return false;
+         }
+    if( document.myForm.MM.value == "" || isNaN(document.myForm.MM.value) )
+         {
+            alert( "Please provide the proper month" );
+            document.myForm.MM.focus() ;
+            return false;
+         }
+         
+    if( document.myForm.DD.value == "" || isNaN(document.myForm.DD.value))
+         {
+            alert( "Please provide the proper date" );
+            document.myForm.DD.focus() ;
+            return false;
+         }  
+         if( document.myForm.area.value == "" )
+         {
+            alert( "Please provide the area" );
+            document.myForm.area.focus() ;
+            return false;
+         }
+        if( document.myForm.descrip.value == "" )
+         {
+            alert( "Please provide the Description" );
+            document.myForm.descrip.focus() ;
+            return false;
+         }
+        if( document.myForm.est_cost.value == "" || isNaN(document.myForm.est_cost.value))
+         {
+            alert( "Please provide the estimate" );
+            document.myForm.est_cost.focus() ;
+            return false;
+         }  
+    
+
+      return true;
+	}	
+	</script>	
 
 	</head>
 	<body>
@@ -21,8 +63,8 @@
 						<h1><img src="images/hhf.png"/><a href="index.php" id="logo"><em>Happy Hearts Fund</em></a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.php">Home</a></li>
-								<li class="current"><a href="login.html">Login</a></li>
+								<li ><a href="index.php">Home</a></li>
+								<li ><a href="login.php">Login</a></li>
 										<li><a href="dashboards.php">Dashboard</a></li>
 										
 										<li>
@@ -39,16 +81,23 @@
 										<li>
 										<a href="#">Partner Data</a>
 										<ul>
-											<li><a href="form2.html">Regional Academic Data</a></li>
-											<li><a href="form3.html">Economic Metrics</a></li>
-											<li><a href="demographics.html">Demographics</a></li>
-											<li><a href="disasters.html">Disaster Registration</a></li>
+											<li><a href="form2.php">Regional Academic Data</a></li>
+											<li><a href="form3.php">Economic Metrics</a></li>
+											<li><a href="demographics.php">Demographics</a></li>
+											<li><a href="disaster.php">Disaster Registration</a></li>
 
 
 										</ul>
 										</li>
-
-										<li><a href="aboutus.html">about us</a></li>
+										<li>
+										<a href="#">HHF Data</a>
+										<ul>
+											<li><a href="user_form.php">User Registration</a></li>
+											<li><a href="edit_principal.php">Principal Registration</a></li>
+											
+										</ul>
+										</li>
+										<li><a href="aboutus.php">about us</a></li>
 								<!-- <li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -63,85 +112,44 @@
 
 				</div>
 				
-				<div><!-- login -->
+				<div align='centre'><br>
 					
-				</div>
 
-				
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Happy Hearts Fund</h2>
-						<a href="#" class="button">Learn More</a>
-					</header>
-				</section>
+<?php
+	session_start();
+	
+	?>
+
+	<div id="mainContent">
+		<div class="content">
+			<article class="topContent">
+					
+				<content>
+					<form id="form" action="login-exe.php" method="post" style= "margin: 0 auto; width:20%">
+					
+				<h2>Sign In</h2>
+			
+						<p><label for="Username">Username : &nbsp</label><input type="text" name="Username"/></p><br>
+						<p><label for="Password">Password : &nbsp</label><input type="password" name="Password" /></p><br>
+						<input type="submit" value="Sign In" class="button" />
+					
+
+					<!--<div id="row"><label for="Username">Username : &nbsp;</label><input type="text" name="Username" /></div>
+					<div id="row"><label for="Password">Password : &nbsp;</label><input type="password" name="Password" /></div>
+					<div id="row">
+						<input type="submit" value="Sign In" class="button" /></div> -->
+		</form>
+
+
+
+				</content>
+			</article>
+			
 
 			
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
-							<section class="3u 6u(narrower) 12u$(mobilep)">
-								<h3>Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">link1</a></li>
-									<li><a href="#">link2</a></li>
-									
-								</ul>
-							</section>
-							<section class="3u 6u$(narrower) 12u$(mobilep)">
-								<h3>More Links to Stuff</h3>
-								<ul class="links">
-									<li><a href="#">link3</a></li>
-									<li><a href="#">link4</a></li>
-									
-								</ul>
-							</section>
-							<section class="6u 12u(narrower)">
-								<h3>Get In Touch</h3>
-								<form>
-									<div class="row 50%">
-										<div class="6u 12u(mobilep)">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="6u 12u(mobilep)">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<ul class="actions">
-												<li><input type="submit" class="button alt" value="Send Message" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-						</div>
-					</div>
-
-					<!-- Icons -->
-						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-						</ul>
-
-					<!-- Copyright -->
-						<div class="copyright">
-							<ul class="menu">
-								<li>&copy; Happy Hearts Fund. All rights reserved</li>
-							</ul>
-						</div>
-
-				</div>
-
+			
+		</div>
+	</div>
 		</div>
 
 		<!-- Scripts -->

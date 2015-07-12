@@ -68,8 +68,8 @@ return true;
 						<h1><img src="images/hhf.png"/><a href="index.php" id="logo"><em>Happy Hearts Fund</em></a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="index.php">Home</a></li>
-								<li><a href="login.html">Login</a></li>
+								<li ><a href="index.php">Home</a></li>
+								<li ><a href="login.php">Login</a></li>
 										<li><a href="dashboards.php">Dashboard</a></li>
 										
 										<li>
@@ -77,7 +77,7 @@ return true;
 										<ul>
 											<li><a href="form1.php">Academic Form</a></li>
 											<li><a href="school_fix.php">Maintainance Form</a></li>
-											<li class="current"><a href="schoolinfo.php">Yearly Information</a></li>
+											<li><a href="schoolinfo.php">Yearly Information</a></li>
 											<li><a href="add_school.php">Register School</a></li>
 
 
@@ -86,16 +86,23 @@ return true;
 										<li>
 										<a href="#">Partner Data</a>
 										<ul>
-											<li><a href="form2.html">Regional Academic Data</a></li>
-											<li><a href="form3.html">Economic Metrics</a></li>
-											<li><a href="demographics.html">Demographics</a></li>
-											<li><a href="disasters.html">Disaster Registration</a></li>
+											<li><a href="form2.php">Regional Academic Data</a></li>
+											<li><a href="form3.php">Economic Metrics</a></li>
+											<li><a href="demographics.php">Demographics</a></li>
+											<li><a href="disaster.php">Disaster Registration</a></li>
 
 
 										</ul>
 										</li>
-
-										<li><a href="aboutus.html">about us</a></li>
+										<li>
+										<a href="#">HHF Data</a>
+										<ul>
+											<li><a href="user_form.php">User Registration</a></li>
+											<li><a href="edit_principal.php">Principal Registration</a></li>
+											
+										</ul>
+										</li>
+										<li><a href="aboutus.php">about us</a></li>
 								<!-- <li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -104,6 +111,7 @@ return true;
 								</li> -->
 							</ul>
 						</nav>
+
 
 
 
