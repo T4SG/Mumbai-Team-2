@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="thumbnail adjust1">
-                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="http://happyheartsfund.org/wp-content/uploads/2015/02/Featured-Photo-2-700x384.jpg"> </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="images/img2.jpeg"> </div>
                             <div class="col-md-10 col-sm-10 col-xs-12">
                                 <div class="caption">
                                     <p class="text-info lead adjust2">Announcement</p>
@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="thumbnail adjust1">
-                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="http://happyheartsfund.org/wp-content/uploads/2014/10/Haiti-Petra-700x500.jpg"> </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="images/img1.jpeg"> </div>
                             <div class="col-md-10 col-sm-10 col-xs-12">
                                 <div class="caption">
                                     <p class="text-info lead adjust2">Announcement</p>
@@ -119,7 +119,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="thumbnail adjust1">
-                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="http://happyheartsfund.org/wp-content/uploads/2015/05/blog-post-may-chile-school-700x384.jpg"> </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12"> <img class="media-object img-rounded img-responsive" src="images/img3.jpeg"> </div>
                             <div class="col-md-10 col-sm-10 col-xs-12">
                                 <div class="caption">
                                     <p class="text-info lead adjust2">Announcement</p>
