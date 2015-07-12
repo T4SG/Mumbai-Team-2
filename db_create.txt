@@ -4,9 +4,9 @@ create table roles(role_id int AUTO_INCREMENT primary key,role_name varchar(20))
 
 create table role_map(id int, role_id int, primary key(id, role_id),foreign key(id) references user(id), foreign key(role_id) references roles(role_id) );
 
-create table disaster(disasterid int AUTO_INCREMENT primary key, type varchar(25), disasterdate date, region varchar(25), country varchar(25), state varchar(25), city varchar(25), injuries int, deaths int);
+create table disaster(disasterid int AUTO_INCREMENT primary key, type varchar(25), disasterdate date, region varchar(25), country varchar(25), state varchar(25), city varchar(25));
 
-create table demographics(demo_id int AUTO_INCREMENT primary key, region varchar(25), country varchar(25), state varchar(25), city varchar(25), members int, children int, teachers int, girls int, boys int, disasterid int, foreign key(disasterid) references disaster(disasterid));
+create table demographics(demo_id int AUTO_INCREMENT primary key, region varchar(25), country varchar(25), state varchar(25), city varchar(25), members int, children int, teachers int, girls int, boys int, disasterid int, injuries int, deaths int, foreign key(disasterid) references disaster(disasterid));
 
 create table school(school_id int AUTO_INCREMENT PRIMARY KEY, school_name varchar(30), region varchar(25), country varchar(25), state varchar(25), city varchar(25), date_rebuilt date, sem_begin varchar(20), sem_end varchar(20), type varchar(20), hhf boolean, director_id int, foreign key(director_id) references user(id));
 
