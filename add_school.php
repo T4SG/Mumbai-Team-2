@@ -168,7 +168,7 @@ function populateCountries(countryElementId, stateElementId) {
 				</div>
 				
 				<div ><!-- form2 -->
-					<form style="margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="insert_school.php" onsubmit="return (validateForm());" method="post">
 						School Name:</br>
 						<input type="text" name="school_name" placeholder="e.g. St.Paul's School"></input></br>
 						Region:</br>
