@@ -191,7 +191,7 @@ function populateCountries(countryElementId, stateElementId) {
 					<form style="margin: 0 auto; width:20%" name="myForm" action="" onsubmit="return (validateForm());" method="post">
 						Region:</br>
 						<select name="region">
-							<option value="Asia Pacific">Asia Pacific</option>
+							<option value="Asia">Asia</option>
 						</select></br></br>
 						<br/>Select Country:
 						<select id="country" name="country"></select>
