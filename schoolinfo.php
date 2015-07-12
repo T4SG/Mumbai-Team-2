@@ -120,9 +120,12 @@ return true;
 				</div>
 				
 				<div ><!-- form2 --></br>
-					<form style="margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="insert_schoolinfo.php" onsubmit="return (validateForm());" method="post">
 						<h2>School Information</h2></br>
-						
+						School ID:</br>
+						<input type="text" name="school_id" placeholder="eg: 2" required></input></br>
+						Date:</br>
+						<input type="text" name="udate" placeholder="YYYY-MM-DD" required></input></br>
 						Number of Children:</br>
 						<input type="text" name="children" placeholder="e.g. 4500" required></input></br>
 						Number of girls:</br>

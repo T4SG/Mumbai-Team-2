@@ -6,7 +6,7 @@ function DetailsInsert($con)
 $datecon=$_POST["YYYY"]."-".$_POST["MM"]."-".$_POST["DD"];
  	
  		//$query="INSERT into customers ('check_in', 'check-out', 'room_type', 'adults_per_room', 'children_0_5', 'children_6_12') VALUES ('$checkin.','$checkout','$roomtype','$adults','$child0','$child6');"; 
-	$query="INSERT INTO `happy_hearts`.`school_info` ( `school_id`, `date_detected`, `area`, `description`,`cost_repair`) VALUES ('".$_POST["school_id"]."','".$datecon."','".$_POST["area"]."','".$_POST["description"]."','".$_POST["est_cost"]."');"; //id is auto increment
+	$query="INSERT INTO `happy_hearts`.`schoolinfo` ( `school_id`, `date_updated`, `children`, `teachers`,`girls`,`boys`,`new_enroll`,`no_left`) VALUES ('".$_POST["school_id"]."','".$_POST["udate"]."','".$_POST["children"]."','".$_POST["girls"]."','".$_POST["boys"]."','".$_POST["no_enroll"]."','".$_POST["no_left"]."');"; //id is auto increment
 	
 	echo $query;
 	if(mysqli_query($con,$query)) //Runs the query and returns boolean variable.
