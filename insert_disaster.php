@@ -1,12 +1,12 @@
 <?php
-$con=mysqli_connect("localhost","goldenleaf","larry_goldenleaf","hhf");
+$con=mysqli_connect("localhost","root","code4good","happy_hearts");
 function DetailsInsert($con){
 
 $datecon=$_POST["YYYY"]."-".$_POST["MM"]."-".$_POST["DD"];
 
  	
  		//$query="INSERT into customers ('check_in', 'check-out', 'room_type', 'adults_per_room', 'children_0_5', 'children_6_12') VALUES ('$checkin.','$checkout','$roomtype','$adults','$child0','$child6');"; 
-	$query="INSERT INTO `hhf`.`disaster` ( `type`, `disasterdate`) VALUES ('".$_POST["disaster"]."','".$datecon."');"; //id is auto increment
+	$query="INSERT INTO `happy_hearts`.`disaster` ( `type`, `disasterdate`) VALUES ('".$_POST["disaster"]."','".$datecon."');"; //id is auto increment
 	
 	echo $query;
 	if(mysqli_query($con,$query)) //Runs the query and returns boolean variable.

@@ -1,11 +1,11 @@
 	
 <?php
-$con=mysqli_connect("localhost","goldenleaf","larry_goldenleaf","hhf");
+$con=mysqli_connect("localhost","root","code4good","happy_hearts");
 function DetailsInsert($con)
 {
  	
  		//$query="INSERT into customers ('check_in', 'check-out', 'room_type', 'adults_per_room', 'children_0_5', 'children_6_12') VALUES ('$checkin.','$checkout','$roomtype','$adults','$child0','$child6');"; 
-	$query="INSERT INTO `hhf`.`demographics` ( `region`, `country`, `state`, `city`,`members`,`children`,`teachers`, `girls`, `boys`, `disasterid`,`injuries`,`deaths`) VALUES ('".$_POST["region"]."','".$_POST["country"]."','".$_POST["state"]."','".$_POST["city"]."','".$_POST["n_mem"]."','".$_POST["n_child"]."','".$_POST["n_teachers"]."','".$_POST["n_girl"]."','".$_POST["n_boy"]."','".$_POST["disaster_id"]."','".$_POST["n_injuries"]."','".$_POST["n_deaths"]."');"; //id is auto increment
+	$query="INSERT INTO `happy_hearts`.`demographics` ( `region`, `country`, `state`, `city`,`members`,`children`,`teachers`, `girls`, `boys`, `disasterid`,`injuries`,`deaths`) VALUES ('".$_POST["region"]."','".$_POST["country"]."','".$_POST["state"]."','".$_POST["city"]."','".$_POST["n_mem"]."','".$_POST["n_child"]."','".$_POST["n_teachers"]."','".$_POST["n_girl"]."','".$_POST["n_boy"]."','".$_POST["disaster_id"]."','".$_POST["n_injuries"]."','".$_POST["n_deaths"]."');"; //id is auto increment
 	
 	echo $query;
 	if(mysqli_query($con,$query)) //Runs the query and returns boolean variable.
