@@ -207,6 +207,8 @@ function populateCountries(countryElementId, stateElementId) {
 						<input type="text" name="n_mem" placeholder="e.g. 78"></input>
 						<br/>Number of children:<br/>
 						<input type="text" name="n_child" placeholder="e.g. 78"></input>
+						<br/>Number of teachers:<br/>
+						<input type="text" name="n_teachers" placeholder="e.g. 78"></input>
 						<br/>Number of girls:<br/>
 						<input type="text" name="n_girl" placeholder="e.g. 78"></input>
 						<br/>Number of boys:<br/>

@@ -73,7 +73,9 @@
 				</div>
 				
 				<div><!-- aboutus -->
-					
+				<p>Happy Hearts Fund rebuilds safe-resilient schools in areas impacted by natural disasters. We work when children are most likely to be forgotten—during the gap period after emergency response is complete—to bring hope and empowerment to generations of children and entire communities.</p>
+				<br/>
+				<p>Happy Hearts Fund was created by Petra Němcová as a response to the devastating effects of the 2004 Indian Ocean Tsunami. Today, HHF serves 9 countries—Indonesia, Thailand, Mexico, Peru, Haiti, Chile, Philippines, Colombia and the USA—where it has built 116 schools that have served over 50,000 students. These 116 schools translate into almost $15,000,000</p>
 				</div>
 
 				
