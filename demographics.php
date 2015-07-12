@@ -188,7 +188,7 @@ function populateCountries(countryElementId, stateElementId) {
 				</div>
 				
 				<div ><!-- form2 -->
-					<form style="margin: 0 auto; width:20%" name="myForm" action="" onsubmit="return (validateForm());" method="post">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="insert_demo.php" onsubmit="return (validateForm());" method="post">
 						Region:</br>
 						<select name="region">
 							<option value="Asia">Asia</option>
@@ -215,7 +215,10 @@ function populateCountries(countryElementId, stateElementId) {
 						<input type="text" name="n_boy" placeholder="e.g. 78"></input>
 						<br/>Disaster ID:<br/>
 						<select name="disaster_id">
-						<option>From database</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						
 						</select>
 						<br/>Number of injuries:<br/>
 						<input type="text" name="n_injuries" placeholder="e.g. 78"></input>

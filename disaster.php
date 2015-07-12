@@ -49,8 +49,8 @@ return true;
 						<h1><img src="images/hhf.png"/><a href="index.php" id="logo"><em>Happy Hearts Fund</em></a></h1>
 						<nav id="nav">
 							<ul>
-								<li ><a href="index.php">Home</a></li>
-								<li ><a href="login.php">Login</a></li>
+								<li class="current"><a href="index.php">Home</a></li>
+								<li><a href="login.html">Login</a></li>
 										<li><a href="dashboards.php">Dashboard</a></li>
 										
 										<li>
@@ -67,23 +67,16 @@ return true;
 										<li>
 										<a href="#">Partner Data</a>
 										<ul>
-											<li><a href="form2.php">Regional Academic Data</a></li>
-											<li><a href="form3.php">Economic Metrics</a></li>
-											<li><a href="demographics.php">Demographics</a></li>
-											<li><a href="disaster.php">Disaster Registration</a></li>
+											<li><a href="form2.html">Regional Academic Data</a></li>
+											<li><a href="form3.html">Economic Metrics</a></li>
+											<li><a href="demographics.html">Demographics</a></li>
+											<li class="current"><a href="disasters.html">Disaster Registration</a></li>
 
 
 										</ul>
 										</li>
-										<li>
-										<a href="#">HHF Data</a>
-										<ul>
-											<li><a href="user_form.php">User Registration</a></li>
-											<li><a href="edit_principal.php">Principal Registration</a></li>
-											
-										</ul>
-										</li>
-										<li><a href="aboutus.php">about us</a></li>
+
+										<li><a href="aboutus.html">about us</a></li>
 								<!-- <li>
 									<a href="#">Dropdown</a>
 									<ul>
@@ -96,10 +89,11 @@ return true;
 
 
 
+
 				</div>
 				
 				<div ><!-- form2 --></br>
-					<form style="margin: 0 auto; width:20%" name="myForm" action="demo_form.asp" onsubmit="return (validateForm());" method="post">
+					<form style="margin: 0 auto; width:20%" name="myForm" action="insert_disaster.php" onsubmit="return (validateForm());" method="post">
 						<h2>Disaster Metrics</h2></br>
 						Disaster that took place:</br> 
 						<select name="disaster" required>
