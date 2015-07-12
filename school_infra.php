@@ -12,49 +12,50 @@
     	<script type="text/javascript" src="js/bootstrap.js"></script>     
     	<script type="text/javascript">
 function validateForm() {
-	var currentDate = new Date()
-    var day = currentDate.getDate();
-    var month = currentDate.getMonth() + 1;
-    var year = currentDate.getFullYear();
-    var my_date = year+"-"+month+"-"+day;
-    document.getElementById("date_updated").innerHTML=my_date;
+	
      
 
-    if( document.myForm.children.value == "" || isNaN(document.myForm.children.value) )
+    if( document.myForm.school_id.value == "" || isNaN(document.myForm.school_id.value) )
          {
-            alert( "Please provide students " );
-            document.myForm.children.focus() ;
+            alert( "Please provide school ID! " );
+            document.myForm.school_id.focus() ;
             return false;
          }
          
-    if( document.myForm.girls.value == "" || isNaN(document.myForm.girls.value))
+    if( document.myForm.no_classrooms.value == "" || isNaN(document.myForm.no_classrooms.value))
          {
-            alert( "Please provide number of girls" );
-            document.myForm.girls.focus() ;
+            alert( "Please provide number of classrooms" );
+            document.myForm.no_classrooms.focus() ;
             return false;
          }  
-         if( document.myForm.boys.value == "" || isNaN(document.myForm.boys.value) )
+         if( document.myForm.comp_lab.value == "" || isNaN(document.myForm.boys.value) )
          {
-            alert( "Please provide number of boys" );
-            document.myForm.boys.focus() ;
+            alert( "Please provide data about existence of computer lab!" );
+            document.myForm.comp_lab.focus() ;
             return false;
          }
-    if( document.myForm.teachers.value == "" || isNaN(document.myForm.teachers.value) )
+    if( document.myForm.no_comp.value == "" || isNaN(document.myForm.no_comp.value) )
          {
-            alert( "Please provide number of teachers" );
-            document.myForm.teachers.focus() ;
+            alert( "Please provide number of computers" );
+            document.myForm.no_comp.focus() ;
             return false;
          }
-         if( document.myForm.no_enroll.value == "" || isNaN(document.myForm.no_enroll.value) )
+         if( document.myForm.no_text.value == "" || isNaN(document.myForm.no_text.value) )
          {
-            alert( "Please provide enrollment number" );
-            document.myForm.no_enroll.focus() ;
+            alert( "Please provide number of textbooks!" );
+            document.myForm.no_text.focus() ;
             return false;
          }
-         if( document.myForm.no_left.value == "" || isNaN(document.myForm.no_left.value) )
+         if( document.myForm.no_phones.value == "" || isNaN(document.myForm.no_phones.value) )
          {
-            alert( "Please provide of the children who have left" );
-            document.myForm.no_left.focus() ;
+            alert( "Please provide number of phones!" );
+            document.myForm.no_phones.focus() ;
+            return false;
+         }
+		 if( document.myForm.prop_val.value == "" || isNaN(document.myForm.prop_val.value) )
+         {
+            alert( "Please provide the property value!" );
+            document.myForm.prop_val.focus() ;
             return false;
          }
       
@@ -136,7 +137,7 @@ return true;
 						Number of Textbooks:</br>
 						<input type="text" name="no_text"></input></br>
 						Number of phones:</br>
-						<input type="text" name="no_phone"></input></br>
+						<input type="text" name="no_phones"></input></br>
 						Property Value:</br>
 						<input type="text" name="prop_val"></input></br>			
 						<input type="submit" value="Submit Form"></input></br>
