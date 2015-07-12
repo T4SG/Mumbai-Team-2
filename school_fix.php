@@ -59,23 +59,47 @@ function validateForm() {
 	<body>
 		<div id="page-wrapper">
 				<div id="header">
-						<h1><a href="index.html" id="logo"><em>Happy Hearts Fund</em></a></h1>
+						<h1><img src="images/hhf.png"/><a href="index.php" id="logo"><em>Happy Hearts Fund</em></a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="current"><a href="form3.html">Home</a></li>
-								<li>
+								<li class="current"><a href="index.php">Home</a></li>
+								<li><a href="login.html">Login</a></li>
+										<li><a href="dashboards.php">Dashboard</a></li>
+										
+										<li>
+										<a href="#">Principal Data</a>
+										<ul>
+											<li><a href="form1.php">Academic Form</a></li>
+											<li class="current"><a href="school_fix.php">Maintainance Form</a></li>
+											<li><a href="schoolinfo.php">Yearly Information</a></li>
+											<li><a href="add_school.php">Register School</a></li>
+
+
+										</ul>
+										</li>
+										<li>
+										<a href="#">Partner Data</a>
+										<ul>
+											<li><a href="form2.html">Regional Academic Data</a></li>
+											<li><a href="form3.html">Economic Metrics</a></li>
+											<li><a href="demographics.html">Demographics</a></li>
+											<li><a href="disasters.html">Disaster Registration</a></li>
+
+
+										</ul>
+										</li>
+
+										<li><a href="aboutus.html">about us</a></li>
+								<!-- <li>
 									<a href="#">Dropdown</a>
 									<ul>
-										<li><a href="login.html">login</a></li>
-										<li><a href="dashboards.html">dashboard</a></li>
-										<li><a href="form1.html">form1</a></li>
-										<li><a href="form2.html">form2</a></li>
-										<li><a href="form3.html">form3</a></li>
-										<li><a href="aboutus.html">about us</a></li>
+										
 									</ul>
-								</li>
+								</li> -->
 							</ul>
 						</nav>
+
+
 
 
 
