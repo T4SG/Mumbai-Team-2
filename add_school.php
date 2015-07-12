@@ -227,8 +227,8 @@ function populateCountries(countryElementId, stateElementId) {
 							<option value="government">Government</option>
 							<option value="private">Private</option>
 						</select></br>
-						Principal's ID:<br/>
-							<input type="text" name="princ_id"></input>
+						Principal's ID:<br />
+						<input type="text" name="princ_id"></input>
 						<center><input type="submit" value="Submit"></input>
 					</form>
 				</div>
